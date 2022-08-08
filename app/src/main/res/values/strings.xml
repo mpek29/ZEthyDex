@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Z\'EthyDex</string>
+
+    <!-- BottomNavigationView -->
+    <string name="home_button">Accueil</string>
+    <string name="zethydex_button">Z\'EthyDex</string>
+    <string name="add_button">Ajouter</string>
+
+    <!-- Home Fragment -->
+    <string name="home_title">Dernier Z\'Ethy capturé</string>
+    <string name="home_subtitle">@string/app_name</string>
+    <string name="home_item_title">Nom du Z\'Ethy</string>
+    <string name="home_item_description">Description du Z\'Ethy</string>
+    <string name="home_loading_bar_title">Avancement du Z\'EthyDex</string>
+    <string name="home_loading_bar_percentage">50%</string>
+
+    <!-- Collection Fragment -->
+    <string name="collection_title">Mon Z\'EthyDex</string>
+    <string name="collection_subtitle">@string/app_name</string>
+    <string name="collection_item_title">@string/home_item_title</string>
+    <string name="collection_item_description">@string/home_item_description</string>
+
+    <!-- Register Fragment -->
+    <string name="register_title">Ajout d\'un Z\'Ethy</string>
+    <string name="register_subtitle">@string/app_name</string>
+    <string name="register_send_picture_button">Envoyer une photo</string>
+    <string name="register_input_name">Nom du Z\'Ethy</string>
+    <string name="register_input_description">Description</string>
+    <string name="register_input_apartment">Appartement</string>
+    <string name="register_input_apartment_default">554-1</string>
+    <string name="register_input_favorite_drink">Boisson favorite</string>
+    <string name="register_input_favorite_drink_default">Chouchen</string>
+    <string name="register_confirm_button">Confirmer</string>
+
+    <!-- DetailsPopup -->
+    <string name="detail_popup_item_title">Nom du Z\'Ethy</string>
+    <string name="detail_popup_cat_description">Description</string>
+    <string name="detail_popup_cat_description_default">Description</string>
+    <string name="detail_popup_cat_apartment">@string/register_input_apartment</string>
+    <string name="detail_popup_cat_apartment_default">@string/register_input_apartment_default</string>
+    <string name="detail_popup_cat_favorite_drink">@string/register_input_favorite_drink</string>
+    <string name="detail_popup_cat_favorite_drink_default">@string/register_input_favorite_drink_default</string>
+</resources>
