@@ -40,4 +40,6 @@
     <string name="detail_popup_cat_apartment_default">@string/register_input_apartment_default</string>
     <string name="detail_popup_cat_favorite_drink">@string/register_input_favorite_drink</string>
     <string name="detail_popup_cat_favorite_drink_default">@string/register_input_favorite_drink_default</string>
+
+    <string name="test">test</string>
 </resources>
