@@ -29,5 +29,21 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@drawable/bottom_nav_icon_color_selector</item>
+        <item name="itemTextColor">@drawable/bottom_nav_icon_color_selector</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationView</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationView</item>
+    </style>
+
+    <style name="BottomNavigationTheme">
+        <item name="fontFamily">@font/dumbledore</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
 
 </resources>

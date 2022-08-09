@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Z\'EthyDex</string>
+    <string name="home_button">Home</string>
+    <string name="add_button">Add</string>
+    <string name="home_title">Last Z\'Ethy captured</string>
+    <string name="home_item_title">Z\'Ethy\'s name</string>
+    <string name="home_item_description">Z\'Ethy\'s description</string>
+    <string name="home_loading_bar_title">Z\'EthyDex\'s avancement</string>
+    <string name="collection_title">My Z\'EthyDex</string>
+    <string name="register_title">Add of a Z\'Ethy</string>
+    <string name="register_send_picture_button">Send a photo</string>
+    <string name="register_input_name">Z\'Ethy\'s name</string>
+    <string name="register_input_apartment">Apartment</string>
+    <string name="register_input_favorite_drink">Favorite drink</string>
+    <string name="register_confirm_button">Confirm</string>
+    <string name="detail_popup_item_title">Z\'Ethy\'s name</string>
+    <string name="detail_popup_cat_description">Description</string>
+    <string name="detail_popup_cat_description_default">Description</string>
+</resources>

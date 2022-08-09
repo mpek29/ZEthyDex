@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="@string/home_button"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/collectionFragment"
+        android:title="@string/zethydex_button"
+        android:icon="@drawable/ic_star"/>
+
+    <item
+        android:id="@+id/registerFragment"
+        android:title="@string/add_button"
+        android:icon="@drawable/ic_add"/>
+</menu>
