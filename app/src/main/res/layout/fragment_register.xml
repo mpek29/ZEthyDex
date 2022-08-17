@@ -1,20 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegisterFragment">
+    android:layout_height="550dp"
+    tools:context=".fragments.RegisterFragment"
+    android:layout_margin="@dimen/default_margin"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="24sp"/>
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/upload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_send_picture_button"
+            style="@style/TitleTextStyle"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:padding="@dimen/default_margin"/>
+
+        <ImageView
+            android:id="@+id/preview_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_picture_2"
+            android:contentDescription="@string/register_preview_content_description"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/item_margin"
+        android:hint="@string/register_input_name"
+        style="@style/DefaultTextStyle"
+        android:paddingStart="@dimen/default_margin"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/description_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/item_margin"
+        android:hint="@string/register_input_description"
+        style="@style/DefaultTextStyle"
+        android:autofillHints=""
+        android:paddingStart="@dimen/default_margin"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/apartment_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/item_margin"
+        android:hint="@string/register_input_apartment"
+        style="@style/DefaultTextStyle"
+        android:paddingStart="@dimen/default_margin"
+        tools:ignore="RtlSymmetry"
+        android:autofillHints=""/>
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/favorite_drink_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/item_margin"
+        android:hint="@string/register_input_favorite_drink"
+        style="@style/DefaultTextStyle"
+        android:paddingStart="@dimen/default_margin"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="@string/register_confirm_button"
+        android:backgroundTint="@color/black"
+        android:textSize="24sp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:textColor="@color/white"
+        style="@style/DefaultTextStyle"/>
+
+</LinearLayout>

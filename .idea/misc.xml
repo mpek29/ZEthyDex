@@ -5,11 +5,18 @@
       <map>
         <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/drawable/bottom_nav_color.xml" value="0.2575" />
         <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/drawable/bottom_nav_icon_color_selector.xml" value="0.2215" />
-        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/fragment_collection.xml" value="0.2526041666666667" />
-        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/fragment_home.xml" value="0.22" />
-        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/fragment_register.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/drawable/custom_green_progressbar.xml" value="0.232" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/drawable/ic_add.xml" value="0.347" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/fragment_collection.xml" value="0.22" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/fragment_register.xml" value="0.22" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/item_zethy.xml" value="0.5656565656565656" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/my_nav.xml" value="0.14279606669516887" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/popup_zethy_details.xml" value="0.22" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/recycler_row.xml" value="0.21975203078238564" />
         <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/sample_bottom_navigation_menu.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/layout/text_row_item.xml" value="0.1923899102180419" />
         <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/menu/bottom_menu.xml" value="0.20735356990166737" />
         <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Florian/Documents/AndroidStudioProjects/ZEthyDex/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2985" />

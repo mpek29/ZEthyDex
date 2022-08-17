@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" translatable="false">Z\'EthyDex</string>
 
     <!-- BottomNavigationView -->
@@ -6,40 +6,40 @@
     <string name="zethydex_button" translatable="false">Z\'EthyDex</string>
     <string name="add_button">Ajouter</string>
 
+    <!-- Item -->
+    <string name="item_title">Nom du Z\'Ethy</string>
+    <string name="item_description">Description du Z\'Ethy</string>
+
     <!-- Home Fragment -->
     <string name="home_title">Dernier Z\'Ethy capturé</string>
     <string name="home_subtitle" translatable="false">@string/app_name</string>
-    <string name="home_item_title">Nom du Z\'Ethy</string>
-    <string name="home_item_description">Description du Z\'Ethy</string>
-    <string name="home_loading_bar_title">Avancement du Z\'EthyDex</string>
-    <string name="home_loading_bar_percentage" translatable="false">50%</string>
+    <string name="home_progressbar_title" tools:ignore="MissingTranslation">Avancement du Z’EthyDex</string>
+    <string name="home_progressbar_percentage" translatable="false">50%</string>
 
     <!-- Collection Fragment -->
     <string name="collection_title">Mon Z\'EthyDex</string>
     <string name="collection_subtitle" translatable="false">@string/app_name</string>
-    <string name="collection_item_title" translatable="false">@string/home_item_title</string>
-    <string name="collection_item_description" translatable="false">@string/home_item_description</string>
 
     <!-- Register Fragment -->
     <string name="register_title">Ajout d\'un Z\'Ethy</string>
     <string name="register_subtitle" translatable="false">@string/app_name</string>
-    <string name="register_send_picture_button">Envoyer une photo</string>
+    <string name="register_send_picture_button">Charger image</string>
     <string name="register_input_name">Nom du Z\'Ethy</string>
     <string name="register_input_description" translatable="false">Description</string>
     <string name="register_input_apartment">Appartement</string>
-    <string name="register_input_apartment_default" translatable="false">554-1</string>
     <string name="register_input_favorite_drink">Boisson favorite</string>
-    <string name="register_input_favorite_drink_default" translatable="false">Chouchen</string>
     <string name="register_confirm_button">Confirmer</string>
+    <string name="register_preview_content_description">Affichage de l\'image selectionnée</string>
 
     <!-- DetailsPopup -->
-    <string name="detail_popup_item_title">Nom du Z\'Ethy</string>
+    <string name="detail_popup_item_title">Palpek</string>
     <string name="detail_popup_cat_description">Description</string>
-    <string name="detail_popup_cat_description_default">Description</string>
+    <string name="detail_popup_cat_description_default">Palpeur</string>
     <string name="detail_popup_cat_apartment" translatable="false">@string/register_input_apartment</string>
-    <string name="detail_popup_cat_apartment_default" translatable="false">@string/register_input_apartment_default</string>
+    <string name="detail_popup_cat_apartment_default" translatable="false">554-1</string>
     <string name="detail_popup_cat_favorite_drink" translatable="false">@string/register_input_favorite_drink</string>
-    <string name="detail_popup_cat_favorite_drink_default" translatable="false">@string/register_input_favorite_drink_default</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detail_popup_cat_favorite_drink_default" translatable="false">Chouchen</string>
+    <string name="popup_close_button">Boutton de fermeture</string>
+    <string name="popup_delete_button">Boutton de suppression</string>
+
 </resources>
