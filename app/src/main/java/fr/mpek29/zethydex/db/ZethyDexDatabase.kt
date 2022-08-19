@@ -148,18 +148,6 @@ class ZEthyDexDatabase(ctx: Context?) {
 
     }
 
-    //function who aren't finish
-    fun updateZethy(zethy: ZEthyModel): Int {
-        val initialValues = ContentValues()
-        initialValues.put(MySQLiteHelper.KEY_IMAGE, zethy.image)
-        initialValues.put(MySQLiteHelper.KEY_NAME, zethy.name)
-        initialValues.put(MySQLiteHelper.KEY_DESCRIPTION, zethy.description)
-        initialValues.put(MySQLiteHelper.KEY_APARTMENT, zethy.apartment)
-        initialValues.put(MySQLiteHelper.KEY_FAVORITE_DRINK, zethy.favoriteDrink)
-        return db.update(MySQLiteHelper.TABLE_NAME, SQLiteDatabase.CONFLICT_FAIL, initialValues,
-            zethy.id.toString(), null)
-    }
-
     //constructor
     init {
         val factory: SupportSQLiteOpenHelper.Factory = FrameworkSQLiteOpenHelperFactory()

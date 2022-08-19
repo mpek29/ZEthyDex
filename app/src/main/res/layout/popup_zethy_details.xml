@@ -106,10 +106,10 @@
         app:layout_constraintTop_toBottomOf="@+id/detail_popup_cat_favorite_drink" />
 
     <ImageView
+        android:contentDescription="@string/popup_delete_button"
         android:id="@+id/delete_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:contentDescription="@string/popup_delete_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
