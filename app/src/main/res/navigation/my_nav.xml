@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="fr.mpek29.zethydex.HomeFragment"
+        android:name="fr.mpek29.zethydex.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/collectionFragment"
-        android:name="fr.mpek29.zethydex.CollectionFragment"
+        android:name="fr.mpek29.zethydex.fragments.CollectionFragment"
         android:label="fragment_collection"
         tools:layout="@layout/fragment_collection" />
     <fragment
         android:id="@+id/registerFragment"
-        android:name="fr.mpek29.zethydex.RegisterFragment"
+        android:name="fr.mpek29.zethydex.fragments.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
 </navigation>
