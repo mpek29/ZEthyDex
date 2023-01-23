@@ -15,6 +15,10 @@
 
     </style>
 
+    <style name="IconStyle">
+        <item name="android:tint">@color/black</item>
+    </style>
+
     <style name="DefaultTextStyle">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/orange</item>

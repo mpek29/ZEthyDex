@@ -2,19 +2,27 @@ package fr.mpek29.zethydex.fragments
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.Bitmap.CompressFormat
 import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.test.platform.app.InstrumentationRegistry
+import coil.load
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionDeniedResponse
+import com.karumi.dexter.listener.PermissionGrantedResponse
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.single.PermissionListener
 import fr.mpek29.zethydex.MainActivity
 import fr.mpek29.zethydex.R
 import fr.mpek29.zethydex.ZEthyModel
@@ -27,7 +35,9 @@ class RegisterFragment(
     private val context: MainActivity
 ) : Fragment() {
 
-    private var previewImage:ImageView? = null
+    private val galleryRequestCode = 2
+
+    private var previewImage: ImageView? = null
     private lateinit var editName: EditText
     private lateinit var editDescription: EditText
     private lateinit var editApartment: EditText
@@ -52,12 +62,13 @@ class RegisterFragment(
         confirmBtn = view.findViewById(R.id.confirm_button)
         uploadBtn = view.findViewById(R.id.upload_btn)
 
+        //when you click on the image
         uploadBtn.setOnClickListener {
-            pickupImage()
+            galleryCheckPermission()
         }
 
         view.findViewById<ImageView>(R.id.preview_image).setOnClickListener {
-            pickupImage()
+            galleryCheckPermission()
         }
 
         confirmBtn.setOnClickListener {
@@ -68,27 +79,68 @@ class RegisterFragment(
         return view
     }
 
-    private fun pickupImage() {
-        //Create a windows for choose a picture
-        val intent = Intent()
-        intent.type = "image/"
-        intent.action = Intent.ACTION_GET_CONTENT
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"),47)
+    private fun galleryCheckPermission() {
 
+        Dexter.withContext(context).withPermission(
+            android.Manifest.permission.READ_EXTERNAL_STORAGE
+        ).withListener(object : PermissionListener {
+            override fun onPermissionGranted(p0: PermissionGrantedResponse?) {
+                gallery()
+            }
+
+            override fun onPermissionDenied(p0: PermissionDeniedResponse?) {
+                Toast.makeText(
+                    context,
+                    "Vous avez refusé l'autorisation de stockage pour sélectionner l'image",
+                    Toast.LENGTH_SHORT
+                ).show()
+                showRotationalDialogForPermission()
+            }
+
+            override fun onPermissionRationaleShouldBeShown(
+                p0: PermissionRequest?, p1: PermissionToken?) {
+                showRotationalDialogForPermission()
+            }
+        }).onSameThread().check()
+    }
+
+    private fun gallery() {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, galleryRequestCode)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 47 && resultCode == Activity.RESULT_OK){
-            // Check if the data are null or not
-            if (data == null || data.data == null) return
 
-            // take the picture
-            val selectedImage = data.data
-
-            //update the image preview
-            previewImage?.setImageURI(selectedImage)
+        if (resultCode == Activity.RESULT_OK) {
+            view?.findViewById<ImageView>(R.id.preview_image)?.load(data?.data)
         }
+
+    }
+
+
+    private fun showRotationalDialogForPermission() {
+        AlertDialog.Builder(context)
+            .setMessage("Il semble que vous ayez désactivé les autorisations requises pour cette fonctionnalité. Il peut être activé dans les paramètres de l'application !!!")
+
+            .setPositiveButton("Aller dans les paramètres") { _, _ ->
+
+                try {
+                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                    val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+                    val uri = Uri.fromParts("package", appContext.packageName, null)
+                    intent.data = uri
+                    startActivity(intent)
+
+                } catch (e: ActivityNotFoundException) {
+                    e.printStackTrace()
+                }
+            }
+
+            .setNegativeButton("CANCEL") { dialog, _ ->
+                dialog.dismiss()
+            }.show()
     }
 
     @SuppressLint("CutPasteId", "SetTextI18n", "UseCompatLoadingForDrawables")
@@ -101,7 +153,7 @@ class RegisterFragment(
         val bitmap = (d as BitmapDrawable).bitmap
         val convertedImage: Bitmap = getResizedBitmap(bitmap)
         val stream = ByteArrayOutputStream()
-        convertedImage.compress(CompressFormat.JPEG, 100, stream)
+        convertedImage.compress(Bitmap.CompressFormat.JPEG, 100, stream)
         val zethyImage = stream.toByteArray()
 
         //take the different data from EditTexts

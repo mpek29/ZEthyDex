@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //we start the activity with the HHomeFragment
+        //we start the activity with the HomeFragment
         loadFragment(HomeFragment(this), R.string.home_title)
 
         //the application change fragment in terms of button pressed

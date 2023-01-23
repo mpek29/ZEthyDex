@@ -46,7 +46,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/popup_zethyname"
         app:layout_constraintTop_toTopOf="@+id/popup_zethyname"
-        app:srcCompat="@drawable/ic_close" />
+        app:srcCompat="@drawable/ic_close"
+        style="@style/IconStyle"/>
 
     <TextView
         android:id="@+id/detail_popup_cat_description"
@@ -107,13 +108,14 @@
 
     <ImageView
         android:contentDescription="@string/popup_delete_button"
+        style="@style/IconStyle"
         android:id="@+id/delete_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_trash" />
+        app:srcCompat="@drawable/ic_trash"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

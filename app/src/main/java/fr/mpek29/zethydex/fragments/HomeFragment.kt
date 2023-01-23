@@ -42,7 +42,7 @@ class HomeFragment(
 
         val mPercentText = view.findViewById<TextView>(R.id.percent_text)
 
-        val zethyMembers = 5
+        val zethyMembers = 11
 
         val mAdapter = MyAdapter("Home",zethyList, R.layout.recycler_row, context, mLoadingProgressBar,mPercentText, zethyMembers)
         //add the adapter to the recyclerview
