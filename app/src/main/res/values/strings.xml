@@ -23,7 +23,7 @@
     <!-- Register Fragment -->
     <string name="register_title">Ajout d\'un Z\'Ethy</string>
     <string name="register_subtitle" translatable="false">@string/app_name</string>
-    <string name="register_send_picture_button">Charger image</string>
+    <string name="register_send_picture_button">Envoyer photo</string>
     <string name="register_input_name">Nom du Z\'Ethy</string>
     <string name="register_input_description" translatable="false">Description</string>
     <string name="register_input_apartment">Appartement</string>
@@ -38,7 +38,7 @@
     <string name="detail_popup_cat_apartment" translatable="false">@string/register_input_apartment</string>
     <string name="detail_popup_cat_apartment_default" translatable="false">554-1</string>
     <string name="detail_popup_cat_favorite_drink" translatable="false">@string/register_input_favorite_drink</string>
-    <string name="detail_popup_cat_favorite_drink_default" translatable="false">Chouchen</string>
+    <string name="detail_popup_cat_favorite_drink_default" translatable="false">Chouchenn</string>
     <string name="popup_close_button">Boutton de fermeture</string>
     <string name="popup_delete_button">Boutton de suppression</string>
 

@@ -9,11 +9,6 @@ import fr.mpek29.zethydex.fragments.CollectionFragment
 import fr.mpek29.zethydex.fragments.HomeFragment
 import fr.mpek29.zethydex.fragments.RegisterFragment
 
-/**
- * This is a "simple" sqlite database example.   It uses a recyclerview and a simple ish adapter
- * to display the data.  There is a much better adapter that understands cursors in SqliteDemo3 and 4.
- */
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         //the application change fragment in terms of button pressed
         val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
-        navigationView.setOnNavigationItemSelectedListener {
+        navigationView.setOnItemSelectedListener setOnNavigationItemSelectedListener@{
             when(it.itemId){
                 R.id.homeFragment -> {
                     loadFragment(HomeFragment(this), R.string.home_title)

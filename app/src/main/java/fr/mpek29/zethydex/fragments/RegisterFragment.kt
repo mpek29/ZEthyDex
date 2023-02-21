@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.test.platform.app.InstrumentationRegistry
@@ -35,7 +36,6 @@ class RegisterFragment(
     private val context: MainActivity
 ) : Fragment() {
 
-    private val galleryRequestCode = 2
 
     private var previewImage: ImageView? = null
     private lateinit var editName: EditText
@@ -91,7 +91,7 @@ class RegisterFragment(
             override fun onPermissionDenied(p0: PermissionDeniedResponse?) {
                 Toast.makeText(
                     context,
-                    "Vous avez refusé l'autorisation de stockage pour sélectionner l'image",
+                    "You have denied storage permission to select the image",
                     Toast.LENGTH_SHORT
                 ).show()
                 showRotationalDialogForPermission()
@@ -107,24 +107,23 @@ class RegisterFragment(
     private fun gallery() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
-        startActivityForResult(intent, galleryRequestCode)
+        getResult.launch(intent)
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (resultCode == Activity.RESULT_OK) {
-            view?.findViewById<ImageView>(R.id.preview_image)?.load(data?.data)
+    private val getResult =
+        registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) {
+            if (it.resultCode == Activity.RESULT_OK) {
+                view?.findViewById<ImageView>(R.id.preview_image)?.load(it.data?.data)
+            }
         }
-
-    }
-
 
     private fun showRotationalDialogForPermission() {
         AlertDialog.Builder(context)
-            .setMessage("Il semble que vous ayez désactivé les autorisations requises pour cette fonctionnalité. Il peut être activé dans les paramètres de l'application !!!")
+            .setMessage("It looks like you have disabled the required permissions for this feature. It can be activated in the app settings!!!")
 
-            .setPositiveButton("Aller dans les paramètres") { _, _ ->
+            .setPositiveButton("Go to settings") { _, _ ->
 
                 try {
                     val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
@@ -197,7 +196,7 @@ class RegisterFragment(
             }
 
             //Reset form
-            val drawable = resources.getDrawable(R.drawable.default_picture)
+            val drawable = resources.getDrawable(R.drawable.default_picture, null)
             previewImage?.setImageDrawable(drawable)
             editName.setText("", TextView.BufferType.EDITABLE)
             editDescription.setText("", TextView.BufferType.EDITABLE)

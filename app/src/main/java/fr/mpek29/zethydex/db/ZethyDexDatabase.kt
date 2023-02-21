@@ -70,20 +70,20 @@ class ZEthyDexDatabase(ctx: Context?) {
         get() {
             //SELECT KEY_NAME, KEY_SCORE FROM DATABASE_TABLE SORT BY KEY_NAME;
             val mCursor = qbQuery(arrayOf(                   //projection, ie columns.
-                MySQLiteHelper.KEY_ROWID,
+                MySQLiteHelper.KEY_ID,
                 MySQLiteHelper.KEY_IMAGE,
                 MySQLiteHelper.KEY_NAME,
                 MySQLiteHelper.KEY_DESCRIPTION,
                 MySQLiteHelper.KEY_APARTMENT,
                 MySQLiteHelper.KEY_FAVORITE_DRINK,
-            ),MySQLiteHelper.KEY_ROWID
+            ),MySQLiteHelper.KEY_ID
             )
             mCursor.moveToLast() //Read by the end for begin by the last entry
             val zethyList = ArrayList<ZEthyModel>()
             if(mCursor.count > 0){
                 do {
                     zethyList.add(ZEthyModel(
-                        mCursor.getInt(mCursor.getColumnIndex(MySQLiteHelper.KEY_ROWID)),
+                        mCursor.getInt(mCursor.getColumnIndex(MySQLiteHelper.KEY_ID)),
                         mCursor.getBlob(mCursor.getColumnIndex(MySQLiteHelper.KEY_IMAGE)),
                         mCursor.getString(mCursor.getColumnIndex(MySQLiteHelper.KEY_NAME)),
                         mCursor.getString(mCursor.getColumnIndex(MySQLiteHelper.KEY_DESCRIPTION)),
@@ -101,7 +101,7 @@ class ZEthyDexDatabase(ctx: Context?) {
         get() {
             //SELECT KEY_NAME, KEY_SCORE FROM DATABASE_TABLE SORT BY KEY_NAME;
             val mCursor = qbQuery(arrayOf(                   //projection, ie columns.
-                MySQLiteHelper.KEY_ROWID,
+                MySQLiteHelper.KEY_ID,
                 MySQLiteHelper.KEY_IMAGE,
                 MySQLiteHelper.KEY_NAME,
                 MySQLiteHelper.KEY_DESCRIPTION,
@@ -114,7 +114,7 @@ class ZEthyDexDatabase(ctx: Context?) {
             if(mCursor.count > 0){
                 do {
                     zethyList.add(ZEthyModel(
-                        mCursor.getInt(mCursor.getColumnIndex(MySQLiteHelper.KEY_ROWID)),
+                        mCursor.getInt(mCursor.getColumnIndex(MySQLiteHelper.KEY_ID)),
                         mCursor.getBlob(mCursor.getColumnIndex(MySQLiteHelper.KEY_IMAGE)),
                         mCursor.getString(mCursor.getColumnIndex(MySQLiteHelper.KEY_NAME)),
                         mCursor.getString(mCursor.getColumnIndex(MySQLiteHelper.KEY_DESCRIPTION)),
@@ -127,7 +127,7 @@ class ZEthyDexDatabase(ctx: Context?) {
         }
 
     //Use of the supportQueryBuilder that build a SupportSQLiteQuery for create a query.
-    private fun qbQuery(projection: Array<String?>?,orderBy: String): Cursor {
+    private fun qbQuery(projection: Array<String>?,orderBy: String): Cursor {
         val qb = SupportSQLiteQueryBuilder.builder(MySQLiteHelper.TABLE_NAME)
         qb.columns(projection)
         qb.selection(null, null)
@@ -140,7 +140,7 @@ class ZEthyDexDatabase(ctx: Context?) {
      * The following is a delete method
      */
     fun deleteZethy(zethy: ZEthyModel){
-        val selection = "${MySQLiteHelper.KEY_ROWID} LIKE ?"
+        val selection = "${MySQLiteHelper.KEY_ID} LIKE ?"
         // Specify arguments in placeholder order.
         val selectionArgs = arrayOf(zethy.id)
         // Issue SQL statement.

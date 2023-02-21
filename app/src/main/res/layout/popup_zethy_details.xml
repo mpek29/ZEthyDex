@@ -29,7 +29,7 @@
         android:id="@+id/popup_zethyname"
         style="@style/TitleTextStyle"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="22dp"
         android:layout_marginStart="@dimen/default_margin"
         android:text="@string/detail_popup_item_title"
         app:layout_constraintBottom_toBottomOf="@+id/cardView2"
@@ -64,6 +64,7 @@
         style="@style/DefaultTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxHeight="40dp"
         android:text="@string/detail_popup_cat_description_default"
         app:layout_constraintStart_toStartOf="@+id/detail_popup_cat_description"
         app:layout_constraintTop_toBottomOf="@+id/detail_popup_cat_description" />
@@ -82,7 +83,7 @@
         android:id="@+id/popup_zethy_apartment"
         style="@style/DefaultTextStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="18dp"
         android:text="@string/detail_popup_cat_apartment_default"
         app:layout_constraintStart_toStartOf="@+id/detail_popup_cat_apartment"
         app:layout_constraintTop_toBottomOf="@+id/detail_popup_cat_apartment" />
@@ -101,7 +102,7 @@
         android:id="@+id/popup_zethy_favorite_drink"
         style="@style/DefaultTextStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="18dp"
         android:text="@string/detail_popup_cat_favorite_drink_default"
         app:layout_constraintStart_toStartOf="@+id/detail_popup_cat_favorite_drink"
         app:layout_constraintTop_toBottomOf="@+id/detail_popup_cat_favorite_drink" />
@@ -115,7 +116,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_trash"/>
+        app:srcCompat="@drawable/ic_trash" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

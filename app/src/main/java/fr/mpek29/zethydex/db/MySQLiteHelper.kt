@@ -36,14 +36,14 @@ class MySQLiteHelper  //required constructor with the super.
         const val KEY_DESCRIPTION = "Description"
         const val KEY_APARTMENT = "Apartment"
         const val KEY_FAVORITE_DRINK = "FavoriteDrink"
-        const val KEY_ROWID = "_id" //required field for the cursorAdapter
+        const val KEY_ID = "_id" //required field for the cursorAdapter
         const val DATABASE_NAME = "ZEthyDex.db"
         const val TABLE_NAME = "ZEthy"
         private const val DATABASE_VERSION = 1
 
         // Database creation sql statement
         private const val DATABASE_CREATE = "CREATE TABLE " + TABLE_NAME + " (" +
-                KEY_ROWID + " integer PRIMARY KEY autoincrement," +  //this line is required for the cursorAdapter.
+                KEY_ID + " integer PRIMARY KEY autoincrement," +  //this line is required for the cursorAdapter.
                 KEY_IMAGE + " BLOB, " +
                 KEY_NAME + " TEXT, " +
                 KEY_DESCRIPTION + " TEXT, " +

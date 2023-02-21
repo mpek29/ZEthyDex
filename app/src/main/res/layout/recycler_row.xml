@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/recycler_margin"
@@ -27,30 +28,42 @@
 
     </androidx.cardview.widget.CardView>
 
-    <View
-        android:id="@+id/view_seperation"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="80dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/name"
-        style="@style/SubtitleTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/item_title"
-        android:layout_marginStart="@dimen/item_margin"
-        app:layout_constraintBottom_toTopOf="@+id/view_seperation"
-        app:layout_constraintStart_toEndOf="@+id/cardView" />
+        <View
+            android:id="@+id/view_seperation"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/description"
-        style="@style/DefaultTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/item_description"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/view_seperation" />
+        <TextView
+            android:id="@+id/name"
+            style="@style/SubtitleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/item_margin"
+            android:text="@string/item_title"
+            app:layout_constraintBottom_toTopOf="@+id/view_seperation"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/DefaultTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/item_margin"
+            android:text="@string/item_description"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/view_seperation" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

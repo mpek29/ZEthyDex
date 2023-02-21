@@ -1,4 +1,4 @@
-package fr.palp15.zethydex
+package fr.mpek29.zethydex
 
 import org.junit.Test
 

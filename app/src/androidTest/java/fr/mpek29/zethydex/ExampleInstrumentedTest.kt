@@ -1,4 +1,4 @@
-package fr.palp15.zethydex
+package fr.mpek29.zethydex
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

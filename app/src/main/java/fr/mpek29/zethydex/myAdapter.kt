@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView
 /**
  * this is a classical adapter create for manage a recycler view and a loadingBar
  */
-class MyAdapter     //constructor
-    (
+class MyAdapter
+(
     private val type: String,
     private val zethyList: ArrayList<ZEthyModel>,
     private val rowLayout: Int,
@@ -48,7 +48,9 @@ class MyAdapter     //constructor
         //this assumes it's not called with a null mCursor, since i means there is a data.
         val currentZEthy = zethyList[position]
         //Creation of the model
-        holder.zethyImage?.setImageDrawable(BitmapDrawable(bytes2Bitmap(currentZEthy.image)))
+        val bitmap = bytes2Bitmap(currentZEthy.image)
+        val drawable = BitmapDrawable(mContext.resources, bitmap)
+        holder.zethyImage?.setImageDrawable(drawable)
         holder.zethyName?.text = currentZEthy.name
         holder.zethyDescription?.text = currentZEthy.description
 

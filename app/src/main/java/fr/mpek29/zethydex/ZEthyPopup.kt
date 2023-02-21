@@ -70,7 +70,7 @@ class ZEthyPopup(
 
     @SuppressLint("Range")
     private fun setupComponents() {
-        findViewById<ImageView>(R.id.image_item)?.setImageDrawable(BitmapDrawable(bytes2Bitmap(zethyList[position].image)))
+        findViewById<ImageView>(R.id.image_item)?.setImageDrawable(BitmapDrawable(mAdapter.mContext.resources, bytes2Bitmap(zethyList[position].image)))
         findViewById<TextView>(R.id.popup_zethyname).text = zethyList[position].name
         findViewById<TextView>(R.id.popup_zethy_description).text = zethyList[position].description
         findViewById<TextView>(R.id.popup_zethy_apartment).text = zethyList[position].apartment
