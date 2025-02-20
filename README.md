@@ -1,10 +1,22 @@
 # ZethyDex
-An application in the style of a pokédex
-==================================================
-In the spirit of open source software development, you can use this code without restraint.
 
-## Overview
+## 🚀 Overview
 ![Main Preview](assets/img/main.png)
 
-## Questions?
-If you have any questions, don't hesitate to ask me on Discord (Flo15#1161)
+An open-source application designed in the style of a Pokédex, allowing users to explore and catalog various creatures and features. This project aims to provide a fun and interactive way to engage with the Pokémon universe.
+
+## 🎯 Purpose
+- 📚 **Cataloging**: Create an extensive database of creatures with detailed information.
+- 🎮 **Interactive Experience**: Offer a user-friendly interface for exploration.
+- 🛠️ **Open Source Development**: Encourage collaboration and contributions from developers.
+
+## 📝 Features
+- 🌟 **User-Friendly Interface**: Easy navigation and search functionalities.
+- 🔍 **Search Functionality**: Quickly find information on specific creatures.
+- 📸 **Image Gallery**: Visual representation of each creature.
+
+## 🌟 License
+This project is open-source. Feel free to use, modify, and contribute! 🚀
+
+## ❓ Questions?
+If you have any questions, feel free to reach out to me on Discord (Flo15#1161).
