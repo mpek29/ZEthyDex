@@ -17,9 +17,9 @@ An open-source application designed in the style of a Pokédex, allowing users t
 
 ### 📷 Screenshots
 <div style="display: flex; justify-content: space-between;">
-    <img src="assets/img/1.jpg" alt="Screenshot 1" width="30%">
-    <img src="assets/img/2.jpg" alt="Screenshot 2" width="30%">
-    <img src="assets/img/3.jpg" alt="Screenshot 3" width="30%">
+    <img src="assets/img/1.png" alt="Screenshot 1" width="30%">
+    <img src="assets/img/2.png" alt="Screenshot 2" width="30%">
+    <img src="assets/img/3.png" alt="Screenshot 3" width="30%">
 </div>
 
 ## 🌟 License
