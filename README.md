@@ -15,6 +15,13 @@ An open-source application designed in the style of a Pokédex, allowing users t
 - 🔍 **Search Functionality**: Quickly find information on specific creatures.
 - 📸 **Image Gallery**: Visual representation of each creature.
 
+### 📷 Screenshots
+<div style="display: flex; justify-content: space-between;">
+    <img src="assets/img/1.jpg" alt="Screenshot 1" width="30%">
+    <img src="assets/img/2.jpg" alt="Screenshot 2" width="30%">
+    <img src="assets/img/3.jpg" alt="Screenshot 3" width="30%">
+</div>
+
 ## 🌟 License
 This project is open-source. Feel free to use, modify, and contribute! 🚀
 
